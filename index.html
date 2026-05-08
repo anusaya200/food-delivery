@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Food Delivery</title>
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">FOOD<span>X</span></div>
+
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="hero-content">
+    <h1>Chicken Biriyani<br> & Fried Rice</h1>
+
+    <p>Hot & Fresh Food Delivered To Your Home</p>
+
+    <a href="#menu" class="btn">Order Now</a>
+  </div>
+
+</section>
+
+<!-- MENU -->
+<section id="menu" class="menu">
+
+  <h2>Popular Foods</h2>
+
+  <div class="food-grid">
+
+    <!-- BIRIYANI -->
+    <div class="food-card">
+
+      <img src="https://images.unsplash.com/photo-1701579231349-d7459c40919d?q=80&w=1200&auto=format&fit=crop">
+
+      <h3>Chicken Biriyani</h3>
+
+      <p>₹180</p>
+
+      <select id="hotel1">
+        <option>Royal Hotel</option>
+        <option>Spicy Hub</option>
+        <option>Biryani Palace</option>
+      </select>
+
+      <button onclick="openOrder('Chicken Biriyani','hotel1')">
+        Order Now
+      </button>
+
+    </div>
+
+    <!-- FRIED RICE -->
+    <div class="food-card">
+
+      <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop">
+
+      <h3>Chicken Fried Rice</h3>
+
+      <p>₹140</p>
+
+      <select id="hotel2">
+        <option>Chinese Corner</option>
+        <option>Food Express</option>
+        <option>Rice Point</option>
+      </select>
+
+      <button onclick="openOrder('Chicken Fried Rice','hotel2')">
+        Order Now
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ORDER POPUP -->
+<div class="popup" id="popup">
+
+  <div class="popup-box">
+
+    <h2>Place Order</h2>
+
+    <input type="text" id="name" placeholder="Your Name">
+
+    <input type="text" id="phone" placeholder="Phone Number">
+
+    <input type="text" id="address" placeholder="Delivery Address">
+
+    <input type="number" id="quantity" placeholder="Quantity">
+
+    <input type="text" id="food" readonly>
+
+    <input type="text" id="hotel" readonly>
+
+    <button onclick="sendOrder()">
+      Confirm Order
+    </button>
+
+    <button class="close-btn" onclick="closePopup()">
+      Close
+    </button>
+
+    <div id="successMessage"></div>
+
+  </div>
+
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+  <h2>Contact Us</h2>
+
+  <p>FoodX Delivery Service</p>
+
+  <p>📞 +91 9178807616</p>
+
+  <p>📍 Odisha, India</p>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
