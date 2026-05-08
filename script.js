@@ -1,4 +1,4 @@
-emailjs.init("YOUR_PUBLIC_KEY");
+emailjs.init("40uBU07U8HDZdoa9T");
 
 function openOrder(food, hotelId){
 
@@ -13,6 +13,7 @@ function openOrder(food, hotelId){
 }
 
 function closePopup(){
+
   document.getElementById("popup").style.display = "none";
 }
 
@@ -40,8 +41,8 @@ function sendOrder(){
   };
 
   emailjs.send(
-    "YOUR_SERVICE_ID",
-    "YOUR_TEMPLATE_ID",
+    "Hotel Anusaya",
+    "template_mgeftcp",
     params
   )
 
@@ -52,8 +53,16 @@ function sendOrder(){
       ✅ Order Sent Successfully <br><br>
 
       Hotel Contact Number:<br>
-      📞 +91 9876543210
+      📞 +91 9178807616
     `;
+
+  })
+
+  .catch(function(error){
+
+    alert("Failed To Send Order");
+
+    console.log(error);
 
   });
 
